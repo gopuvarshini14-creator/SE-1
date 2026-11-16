@@ -51,3 +51,33 @@ kubectl delete service mynginx
 minikube stop
 
 minikube delete
+-------------------------------------------------------------------------
+
+minikube start
+
+kubectl get nodes
+
+minikube addons enable dashboard
+
+minikube addons enable metrics-server
+
+kubectl create deployment mynginx --image=nginx
+
+kubectl scale deployment mynginx --replicas=4
+
+kubectl get deployments
+
+kubectl get rs
+
+kubectl get pods
+
+kubectl expose deployment mynginx --type=NodePort --port=80
+
+kubectl get services
+
+minikube service mynginx --url
+
+kubectl describe service mynginx
+
+minikube dashboard
+
