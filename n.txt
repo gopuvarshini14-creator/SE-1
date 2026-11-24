@@ -1,0 +1,8 @@
+docker pull jasonrivers/nagios:latest
+docker run -d --name nagiosdemo -p 8888:80 jasonrivers/nagios:latest
+docker ps
+
+
+Open in Chrome:
+
+http://localhost:8888
