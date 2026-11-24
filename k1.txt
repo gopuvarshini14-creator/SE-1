@@ -1,1 +1,15 @@
 
+minikube start --driver=docker
+minikube status
+kubectl cluster-info
+kubectl get nodes
+
+docker pull gopuvarshini14/mavenweb:latest
+kubectl create deployment ngixdemo --image=nginx
+
+kubectl get deployments
+kubectl get pods
+kubectl expose deployment ngixdemo --type=NodePort --port=8080 --target-port=80
+kubectl get services
+kubectl get all
+kubectl port-forward service/ngixdemo 8082:8080
